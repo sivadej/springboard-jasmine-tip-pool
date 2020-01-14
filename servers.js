@@ -13,7 +13,7 @@ function submitServerInfo(evt) {
   if (evt) evt.preventDefault(); // when running tests there is no event
 
   let serverName = serverNameInput.value;
-
+  console.log(serverName);
   if (serverName !== '') {
     serverId++;
     allServers['server' + serverId] = { serverName };

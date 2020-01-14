@@ -21,6 +21,5 @@ function calculateTipPercent(billAmt, tipAmt) {
 function appendTd(tr, value) {
   let newTd = document.createElement('td');
   newTd.innerText = value;
-
   tr.append(newTd);
 }
