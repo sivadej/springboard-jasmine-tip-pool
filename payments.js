@@ -42,7 +42,7 @@ function createCurPayment() {
     return {
       billAmt: billAmt,
       tipAmt: tipAmt,
-      tipPercent: calculateTipPercent(billAmt, tipAmt),
+      tipPercent: calculateTipPercent(billAmt, tipAmt)
     }
   }
 }
@@ -55,6 +55,7 @@ function appendPaymentTable(curPayment) {
   appendTd(newTr, '$' + curPayment.billAmt);
   appendTd(newTr, '$' + curPayment.tipAmt);
   appendTd(newTr, curPayment.tipPercent + '%');
+  appendDeleteBtn(newTr);
 
   paymentTbody.append(newTr);
 }

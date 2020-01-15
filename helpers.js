@@ -23,3 +23,16 @@ function appendTd(tr, value) {
   newTd.innerText = value;
   tr.append(newTd);
 }
+
+//create td with value X, delete the row it belongs to
+function appendDeleteBtn(tr) {
+  let newTd = document.createElement('td');
+  newTd.innerText = 'X';
+  newTd.classList.add('deleteBtn');
+  tr.append(newTd);
+  
+  //Set an click event listener on the ‘td’ that will remove the parent ‘tr’ from the dom
+  newTd.addEventListener('click',function(e){
+    newTd.parentElement.remove();
+  })
+}

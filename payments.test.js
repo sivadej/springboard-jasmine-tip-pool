@@ -33,6 +33,7 @@ describe("Payments test (with setup and tear-down)", function() {
       paymentId = 0;
       payment1 = {};
       paymentTbody.innerHTML='';
+      document.querySelector('#summaryTable tbody').innerHTML='';
     });
   });
   
